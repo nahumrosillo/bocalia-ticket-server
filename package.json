@@ -37,6 +37,12 @@
     "vite": "^5.4.19"
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.1"
+    "@ionic/core": "^8.5.6",
+    "@ionic/vue": "^8.5.6",
+    "@point-of-sale/receipt-printer-encoder": "^3.0.3",
+    "@vitejs/plugin-vue": "^5.2.3",
+    "electron-squirrel-startup": "^1.0.1",
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.1"
   }
 }
