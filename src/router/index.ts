@@ -1,17 +1,22 @@
-import { createRouter, createWebHashHistory } from 'vue-router';
-import Home from '../views/Home.vue';
-import About from '../views/About.vue';
+import {createRouter, createWebHashHistory} from '@ionic/vue-router';
+import PrinterList from '@/views/PrinterList.vue';
+import AboutPage from '@/views/AboutPage.vue';
+import {RouteRecordRaw} from "vue-router";
 
-const routes = [
+const routes: Array<RouteRecordRaw> = [
     {
         path: '/',
+        redirect: '/lista-de-impresoras', // Redirecciona a la ruta /home
+    },
+    {
+        path: '/lista-de-impresoras',
         name: 'Home',
-        component: Home,
+        component: PrinterList,
     },
     {
         path: '/about',
         name: 'About',
-        component: About,
+        component: AboutPage,
     },
 ];
 
