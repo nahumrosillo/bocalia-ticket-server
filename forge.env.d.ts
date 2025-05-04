@@ -5,7 +5,7 @@ export {};
 declare global {
     interface Window {
         electronAPI: {
-            testPrinter: (type, ip, port) => Promise<any>;
+            testPrinter: (jsonPrinter) => Promise<any>;
         };
     }
 }

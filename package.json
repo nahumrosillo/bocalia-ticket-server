@@ -1,7 +1,7 @@
 {
   "name": "bocalia-ticket-server",
   "productName": "Bocalia Impresora de tickets",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Aplicación de escritorio para impresión de tickets",
   "main": ".vite/build/main.js",
   "scripts": {
@@ -49,6 +49,7 @@
     "@point-of-sale/network-receipt-printer": "^2.0.1",
     "@point-of-sale/receipt-printer-encoder": "^3.0.3",
     "@vitejs/plugin-vue": "^5.2.3",
+    "electron-log": "^5.4.0",
     "electron-squirrel-startup": "^1.0.1",
     "env-cmd": "^10.1.0",
     "update-electron-app": "^3.1.1",

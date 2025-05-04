@@ -3,11 +3,10 @@
 
 
 import {contextBridge, ipcRenderer} from 'electron';
+import Printer from "@/models/Printer";
 
 contextBridge.exposeInMainWorld('electronAPI', {
-    testPrinter: (type: string, ip: string, port: string): Promise<any> => ipcRenderer.invoke('test-printer', {
-        type,
-        ip,
-        port
+    testPrinter: (jsonPrinter: Printer): Promise<any> => ipcRenderer.invoke('test-printer', {
+        jsonPrinter
     })
 });
