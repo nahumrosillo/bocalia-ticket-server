@@ -1,17 +1,23 @@
 import {createRouter, createWebHashHistory} from '@ionic/vue-router';
-import PrinterList from '@/views/PrinterList.vue';
+import PrinterListPage from '@/views/PrinterListPage.vue';
 import AboutPage from '@/views/AboutPage.vue';
 import {RouteRecordRaw} from "vue-router";
+import AddPrinterPage from "@/views/AddPrinterPage.vue";
 
 const routes: Array<RouteRecordRaw> = [
     {
         path: '/',
-        redirect: '/lista-de-impresoras', // Redirecciona a la ruta /home
+        redirect: '/printers', // Redirecciona a la ruta /home
     },
     {
-        path: '/lista-de-impresoras',
-        name: 'Home',
-        component: PrinterList,
+        path: '/printers',
+        name: 'Impresoras',
+        component: PrinterListPage,
+    },
+    {
+        path: '/add-printer',
+        name: 'Añadir impresora',
+        component: AddPrinterPage,
     },
     {
         path: '/about',
