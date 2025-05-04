@@ -1,15 +1,19 @@
 {
   "name": "bocalia-ticket-server",
-  "productName": "bocalia-ticket-server",
-  "version": "1.0.0",
-  "description": "My Electron application description",
+  "productName": "Bocalia Impresora de tickets",
+  "version": "1.0.2",
+  "description": "Aplicación de escritorio para impresión de tickets",
   "main": ".vite/build/main.js",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
-    "publish": "electron-forge publish",
+    "publish": "env-cmd electron-forge publish",
     "lint": "eslint --ext .ts,.tsx ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nahumrosillo/bocalia-ticket-server"
   },
   "keywords": [],
   "author": {
@@ -26,6 +30,7 @@
     "@electron-forge/plugin-auto-unpack-natives": "^7.8.0",
     "@electron-forge/plugin-fuses": "^7.8.0",
     "@electron-forge/plugin-vite": "^7.8.0",
+    "@electron-forge/publisher-github": "^7.8.0",
     "@electron/fuses": "^1.8.0",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
@@ -45,6 +50,8 @@
     "@point-of-sale/receipt-printer-encoder": "^3.0.3",
     "@vitejs/plugin-vue": "^5.2.3",
     "electron-squirrel-startup": "^1.0.1",
+    "env-cmd": "^10.1.0",
+    "update-electron-app": "^3.1.1",
     "vue": "^3.5.13",
     "vue-router": "^4.5.1"
   }

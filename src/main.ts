@@ -3,6 +3,9 @@ import path from 'node:path';
 import started from 'electron-squirrel-startup';
 import NetworkReceiptPrinter from "@point-of-sale/network-receipt-printer";
 import ReceiptPrinterEncoder from "@point-of-sale/receipt-printer-encoder";
+import { updateElectronApp} from "update-electron-app";
+
+updateElectronApp();
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (started) {
@@ -28,6 +31,7 @@ const createWindow = () => {
 
     // Open the DevTools.
     mainWindow.webContents.openDevTools();
+
 };
 
 // This method will be called when Electron has finished
