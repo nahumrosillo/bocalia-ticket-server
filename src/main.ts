@@ -25,11 +25,9 @@ const createWindow = () => {
     const mainWindow = new BrowserWindow({
         width: 1400,
         height: 1000,
-        title: 'Bocalia Ticket Server',
         webPreferences: {
             preload: path.join(__dirname, 'preload.js')
         },
-        ...(process.platform !== 'darwin' ? { titleBarOverlay: true } : {})
     });
 
     // and load the index.html of the app.
@@ -74,7 +72,7 @@ app.on('activate', () => {
 const menuApp = () => {
     const template: Electron.MenuItemConstructorOptions[] = [
         {
-            label: "Bocalia",
+            label: app.getName(),
             submenu: [
                 {
                     label: `Acerca de ${app.getName()} v${app.getVersion()}`,
